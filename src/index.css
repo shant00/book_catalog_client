@@ -1,0 +1,8 @@
+/* src/index.css or src/App.css */
+@import "@fortawesome/fontawesome-free/css/all.css";
+/* Add your Tailwind utilities and other styles below */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+

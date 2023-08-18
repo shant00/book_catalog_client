@@ -1,0 +1,48 @@
+.category-carousel {
+  
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .category-slide {
+    display: flex;
+    justify-content: space-between;
+  }
+  .category-image {
+    height: 50px !important; /* Adjust the height as needed */
+    width: 50px !important;
+   
+  }
+  
+  .category-card {
+    flex: 1;
+    text-align: left; /* Align content to the left */
+    padding: 5px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+  }
+  
+
+  
+  .category-details {
+    flex: 1;
+  margin-left: 4px;
+  }
+  
+  .category-details h2 {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
