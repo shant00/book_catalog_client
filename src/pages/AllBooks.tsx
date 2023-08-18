@@ -104,9 +104,9 @@ export default function AllBooks() {
     return (
         <>
             <Navbar />
-            <p className="text-center text-lg font-semibold">All Books Book</p>
-            <div className="container mx-auto px-4 py-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <p className="text-center text-2xl font-medium pt-2">All Books</p>
+            <div className="container mx-auto px-4 pb-8 pt-2">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                     {dummyBooks.map((book, index) => (
                         <div key={index} className="max-w-xs m-auto p-4 border rounded shadow">
                             <img src={book.image} alt={book.title} className="w-full rounded" />
