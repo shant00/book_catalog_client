@@ -2,14 +2,19 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useOnHoverOutside } from "../hooks/useHoverOutSite";
+import CartComponent from "./CartComponent";
 
 export default function Navbar() {
   const dropdownRef = useRef(null); // Create a reference for dropdown container
+  const [isCartOpen, setCartOpen] = useState(false);
   const [isMenuDropDownOpen, setMenuDropDownOpen] = useState(false);
 
   // Function to close dropdown
   const closeHoverMenu = () => {
     setMenuDropDownOpen(false);
+  };
+  const toggleCart = () => {
+    setCartOpen(!isCartOpen);
   };
 
   useOnHoverOutside(dropdownRef, closeHoverMenu);
@@ -43,9 +48,14 @@ export default function Navbar() {
             <Link to="/login" className="text-white hover:underline">
               Sign Up / Sign In
             </Link>
-            <Link to="/cart" className="text-white hover:underline">
+            <button
+              onClick={toggleCart}
+              className="text-white hover:underline focus:outline-none"
+            >
               Cart
-            </Link>
+            </button>
+            {/* ... */}
+            {isCartOpen && <CartComponent isOpen={isCartOpen} onClose={() => setCartOpen(false)} />}
             <Link to="/wishList" className="text-white hover:underline">
               Wish List
             </Link>
